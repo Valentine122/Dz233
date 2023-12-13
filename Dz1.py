@@ -1,9 +1,11 @@
 class Human:
     def __init__(self, name="Human"):
         self.name = name
+
 class Animal:
     def __init__(self, name="Animal"):
         self.name = name
+
 class Model:
     def __init__(self, name="Model"):
         self.name = name
@@ -12,37 +14,81 @@ class Auto1:
     def __init__(self, brand):
         self.brand = brand
         self.passengers = []
-        def __add_passenger__(self, human):
-            self.passengers.append(human) 
+        self.animals = []
+        self.models = []
 
-        def __print_passengers_names__(self):
-            if self.passengers!= []:
-                print(f"Names of {self.brand} passengers:")
+    def add_passenger(self, human):
+        self.passengers.append(human)
 
-            for passengers in self.passengers:
-                print(passengers.name)
+    def print_passengers_names(self):
+        if self.passengers:
+            print(f"Names of {self.brand} passengers:")
+            for passenger in self.passengers:
+                print(passenger.name)
+        else:
+            print(f"There are no passengers in {self.brand}")
 
-            else:
-                print(f"There are on passengers in {self.brand}")
+    def add_animal(self, animal):
+        self.animals.append(animal)
 
+    def print_animal_names(self):
+        if self.animals:
+            print(f"Animals in {self.brand}:")
+            for animal in self.animals:
+                print(animal.name)
+        else:
+            print(f"There are no animals in {self.brand}")
+
+    def add_model(self, model):
+        self.models.append(model)
+
+    def print_model_names(self):
+        if self.models:
+            print(f"Models in {self.brand}:")
+            for model in self.models:
+                print(model.name)
+        else:
+            print(f"There are no models in {self.brand}")
 
 class Auto2:
     def __init__(self, brand):
         self.brand = brand
         self.passengers = []
+        self.animals = []
+        self.models = []
 
-        def __add_passenger__(self, human):
-            self.passengers.append(human) 
-        def __print_passengers_names__(self):
+    def add_passenger(self, human):
+        self.passengers.append(human)
 
-            if self.passengers!= []:
-                print(f"Names of {self.brand} passengers:")
-
+    def print_passengers_names(self):
+        if self.passengers:
+            print(f"Names of {self.brand} passengers:")
             for passenger in self.passengers:
                 print(passenger.name)
+        else:
+            print(f"There are no passengers in {self.brand}")
 
-            else:
-                print(f"There are on passengers in {self.brand}")
+    def add_animal(self, animal):
+        self.animals.append(animal)
+
+    def print_animal_names(self):
+        if self.animals:
+            print(f"Animals in {self.brand}:")
+            for animal in self.animals:
+                print(animal.name)
+        else:
+            print(f"There are no animals in {self.brand}")
+
+    def add_model(self, model):
+        self.models.append(model)
+
+    def print_model_names(self):
+        if self.models:
+            print(f"Models in {self.brand}:")
+            for model in self.models:
+                print(model.name)
+        else:
+            print(f"There are no models in {self.brand}")
 
 nick = Human("Nick")
 kate = Human("Kate")
